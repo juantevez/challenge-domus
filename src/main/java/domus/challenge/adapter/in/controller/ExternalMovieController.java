@@ -24,7 +24,9 @@ public class ExternalMovieController {
         List<MovieDto> movies = externalMovieClient.getAllMovies();
         return ResponseEntity.ok(movies);
     }
-    // Método de fallback cuando el circuito está abierto
+
+
+    // TO-DO, deploy circuitbraker
     private ResponseEntity<List<MovieDto>> fallbackGetAllMovies(Throwable t) {
         System.err.println("Fallback method called due to: " + t.getMessage());
         return ResponseEntity.status(503).body(List.of()); // Devuelve lista vacía o caché

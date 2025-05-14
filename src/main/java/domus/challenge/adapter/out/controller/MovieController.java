@@ -31,7 +31,6 @@ public class MovieController {
     @GetMapping("/directors")
     public ResponseEntity<DirectorsResponseDto> getDirectorsWithMoreMoviesThan(
              @Valid ThresholdRequest request) {
-            //@Min(value = 1, message = "The threshold must be a integer number greater than 0") int threshold){
 
         List<MovieDto> allMovies = externalMovieClient.getAllMovies();
 
