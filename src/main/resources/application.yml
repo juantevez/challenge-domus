@@ -1,0 +1,15 @@
+resilience4j:
+  circuitbreaker:
+    instances:
+      externalMovieService:
+        failure-rate-threshold: 50     # Umbral de fallos antes de abrir (50%)
+        minimum-number-of-calls: 5     # Mínimo de llamadas para calcular el umbral
+        sliding-window-size: 10        # Ventana de 10 llamadas
+        wait-duration-in-open-state: 5s # Tiempo en estado abierto antes de probar
+        permitted-number-of-calls-in-half-open-state: 3 # Llamadas en estado semiaabierto
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
