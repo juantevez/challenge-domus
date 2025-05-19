@@ -1,4 +1,4 @@
-package domus.challenge.adapter.out.dto;
+package domus.challenge.domain.model;
 
 import jakarta.validation.constraints.Digits;
 import jakarta.validation.constraints.Min;

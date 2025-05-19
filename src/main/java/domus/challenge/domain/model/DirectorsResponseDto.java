@@ -1,4 +1,4 @@
-package domus.challenge.adapter.out.dto;
+package domus.challenge.domain.model;
 
 import lombok.*;
 
@@ -8,6 +8,6 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class DirectorsResponseDto {
-    private String directors;
+    private List<String> directors;
 
 }

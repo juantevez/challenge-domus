@@ -17,3 +17,23 @@ Domain
 Service 
 * There is a method with the funcionality that retrieves all the movies. 
 
+
+
+
+
+Curl OK (tested locally)
+curl --location 'http://localhost:8080/api/movies/directors?threshold=4'
+
+Response
+{"directors":["Martin Scorsese","Woody Allen"]}
+
+
+Curl with threshold parameter incorrect (Value = 3.6)  (tested locally) 
+
+curl --location 'http://localhost:8080/api/movies/directors?threshold=3.6'
+
+Reponse Validation
+
+{
+"error": "The threshold parameter must be an integer"
+}
