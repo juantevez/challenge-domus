@@ -1,21 +1,25 @@
 SOLUTION
 
 
-I designed the challenge as a hexagonal architecture, separating the adapters, ports, and controller, domain.
+I designed the challenge as a hexagonal architecture, separating by adapters, ports, and domain.
 
 
 Adapter package
 * in: with the subpackages DTO and Controller. There are the endpoint call to GET all the movies 
 * out: with the subpackages DTO and Controller. There are the endpoint which calls the method, that executes the funcionalitu with the filters of the requirement. 
 
+Port package
+Interfaces, for the input/output processing
+
 Config package 
 * Rest template configuration
 
 Domain
-
+* Models package, for data information classes.
+* port packages - 
 
 Service 
-* There is a method with the funcionality that retrieves all the movies. 
+* Concret classes, that implements the method declared in the port interfaces. 
 
 
 
